@@ -136,7 +136,7 @@ h3 {
 
 /*========== Layout ==========*/
 .container {
-  max-width: 968px;
+  max-width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: auto;
@@ -149,19 +149,19 @@ h3 {
 /*========== Reusable css classes ==========*/
 
 .section .container {
-  padding-top: 3.90rem;
-  padding-bottom: 4.75rem;
-  margin-bottom: var(--m-2-5);
+  /* padding-top: 3.90rem; */
+  /* padding-bottom: 4.75rem; */
+  /* margin-bottom: var(--m-2-5); */
 }
 .section-title {
   font-size: var(--h1-font-size);
   margin-left: var(--m-0-75);
-  margin-bottom: var(--m-2-5);
+  /* margin-bottom: var(--m-2-5); */
   margin-top: 0.5rem;
 }
 .padd-15 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px;
+  /* padding-right: 15px; */
 }
 
 /*========== Buttons ==========*/
@@ -213,7 +213,7 @@ h3 {
 .nav {
   height: calc(var(--header-height) + 1.5rem);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   column-gap: 3rem;
 }
@@ -376,6 +376,7 @@ h3 {
 .about-content {
   flex: 0 0 75%;
   max-width: 75%;
+  margin: auto;
 }
 .about-content .about-text, 
 .about-content .skills {
@@ -453,6 +454,11 @@ h3 {
 .service-item h3 {
   margin-bottom: var(--m-0-5);
   color: rgb(0, 0, 0);
+}
+.service-item span {
+  /* background-color: pink; */
+  font-size: 100px;
+  line-height: 105%;
 }
 .service-item p {
   color: rgb(0, 0, 0);
@@ -562,7 +568,7 @@ h3 {
 .portfolio-item {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  margin-bottom: var(--m-1-5);
+  /* margin-bottom: var(--m-1-5); */
 }
 
 .portfolio-item.hide {
@@ -956,7 +962,7 @@ h3 {
     max-width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    margin-bottom: var(--m-2-5);
+    /* margin-bottom: var(--m-2-5); */
     /* display: flex; */
     justify-content:space-evenly;
     align-items: center;
@@ -1020,7 +1026,7 @@ h3 {
   }
   .contact-data,
   .education {
-    margin-bottom: var(--m-2-5);
+    /* margin-bottom: var(--m-2-5); */
   }
   .customize-theme .card {
     max-width: 75vw;
@@ -1077,7 +1083,7 @@ h3 {
   .scroll-down{
     position: absolute;
     /* bottom: var(--m-2-5); */
-    bottom: 0.35rem;
+    bottom: 10%;
     left: 0;
     width: 100%;
   }
