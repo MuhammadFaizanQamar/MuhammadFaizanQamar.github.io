@@ -1,23 +1,29 @@
 const navMenu = document.getElementById("nav-menu"),
       navToogle = document.getElementById("nav-toggle"),
-      navClose = document.getElementById("nav-close")
-
+      navClose = document.getElementById("nav-close"),
+      navBG = document.querySelector(".nav-menu-bg");
 /*=============== SHOW MENU ===============*/
 
 if(navToogle) {
   navToogle.addEventListener('click',() => {
-    navMenu.classList.add("show-menu")
+    navMenu.classList.add("show-menu");
+    // document.body.style.backgroundColor = "red";
+    document.body.classList.add("prevent-scroll");
   })
 }
 
 /*============== MENU HIDDEN ===============*/
 
-if(navClose) {
-  navClose.addEventListener('click',() => {
-    navMenu.classList.remove("show-menu")
-  })
+const handleCloseNav = () => {
+  navMenu.classList.remove("show-menu");
+  document.body.classList.remove("prevent-scroll");
 }
-
+if(navClose) {
+  navClose.addEventListener('click',handleCloseNav);
+}
+if(navBG) {
+  navBG.addEventListener('click', handleCloseNav);
+}
 /*=============== REMOVE MENU MOBILE ===============*/
 
 const navLinks = document.querySelectorAll(".nav-link")
@@ -27,7 +33,7 @@ function linkAction() {
   //when click on menu items show them content
   navMenu.classList.remove('show-menu')
 }
-navLinks.forEach(n => n.addEventListener('click',linkAction))
+navLinks.forEach(n => n.addEventListener('click',linkAction));
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
