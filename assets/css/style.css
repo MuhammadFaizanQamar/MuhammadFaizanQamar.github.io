@@ -101,7 +101,14 @@ body {
   line-height: 1.7;
   font-weight: var(--font-medium);
 }
-
+.mx-auto {
+  border: none;
+  display: block;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
 .portfolio-item .portfolio-item-inner .ncai_intro {
   /* max-width: 50%; */
   /* height: 100%; */
@@ -176,7 +183,7 @@ h3 {
 .btn-default {
   color: #fff;
   vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
   background-color: var(--color-primary);
   transform: perspective(1px) translateZ(0);
 }
