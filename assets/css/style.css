@@ -101,7 +101,14 @@ body {
   line-height: 1.7;
   font-weight: var(--font-medium);
 }
-
+.mx-auto {
+  border: none;
+  display: block;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
 .portfolio-item .portfolio-item-inner .ncai_intro {
   /* max-width: 50%; */
   /* height: 100%; */
@@ -140,6 +147,7 @@ h3 {
   /* margin-left: auto;
   margin-right: auto; */
   margin: auto;
+  padding: 0 20px;
   /* overflow: hidden; */
 }
 .row {
@@ -175,7 +183,7 @@ h3 {
 .btn-default {
   color: #fff;
   vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
   background-color: var(--color-primary);
   transform: perspective(1px) translateZ(0);
 }
@@ -653,6 +661,61 @@ h3 {
   transform: translateY(0);
 }
 
+
+.project-card {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  margin: 20px 0;
+  /* opacity: 0; */
+  /* transform: translateY(50px); */
+  background-color: white;
+
+  .project-media {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+
+    .project-image {
+      width: 100%;
+    }
+    .video-container {
+      /* position: relative; */
+      width: 100%;
+      height: 100%;
+      /* padding-bottom: 56.25%; */
+      iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+      }
+    }
+  }
+  .project-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+
+    .project-links {
+    display: flex;
+    gap: 15px;
+    }
+  }
+  
+}
 /*========== Testimonial ==========*/
 
 
@@ -1040,6 +1103,9 @@ h3 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+  .project-card {
+    flex-direction: column;
+  }
   .about-content .about-text {
     margin-bottom: var(--m-1-5);
   }
@@ -1070,6 +1136,11 @@ h3 {
   .customize-theme .card {
     max-width: 96vw;
     padding: 1rem;
+  }
+  .project-card {
+    .project-info {
+      padding: 20px;
+    }
   }
 
 }
